@@ -1,30 +1,15 @@
-﻿<div class="col-six tab-full right">
+﻿@model List<MyPortfolio.DAL.Entities.Skill>
+
+<div class="col-six tab-full right">
     <h3>Programlama Dilleri & Teknolojiler</h3>
 
     <ul class="skill-bars">
-        <li>
-           
-            <strong>HTML5</strong>
-        </li>
-        <li>
-            
-            <strong>CSS3</strong>
-        </li>
-        <li>
-          
-            <strong>C#</strong>
-        </li>
-        <li>
-           
-            <strong>React</strong>
-        </li>
-        <li>
-            
-            <strong>Github</strong>
-        </li>
-        <li>
-          
-            <strong>PostgreSQL</strong>
-        </li>
+        @foreach (var item in Model)
+        {
+            <li>
+                <strong>@item.Title</strong>
+            </li>
+        }
+
     </ul>
 </div>
